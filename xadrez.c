@@ -3,6 +3,8 @@
 #define MOVIMENTO_TORRE 5
 #define MOVIMENTO_BISPO 5
 #define MOVIMENTO_RAINHA 8
+#define MOVIMENTO_CAVALO_VERTICAL 2
+#define MOVIMENTO_CAVALO_HORIZONTAL 1
 
 int main() {
     // Movimento da Torre (5 casas para a direita) usando for
@@ -28,6 +30,18 @@ int main() {
         printf("Esquerda\n");
         k++;
     } while (k < MOVIMENTO_RAINHA);
+    printf("\n");
+    
+    // Movimento do Cavalo (2 casas para baixo, 1 para a esquerda) usando loops aninhados
+    printf("Movimento do Cavalo:\n");
+    for (int m = 0; m < MOVIMENTO_CAVALO_VERTICAL; m++) {
+        printf("Baixo\n");
+    }
+    int n = 0;
+    while (n < MOVIMENTO_CAVALO_HORIZONTAL) {
+        printf("Esquerda\n");
+        n++;
+    }
     printf("\n");
     
     return 0;
